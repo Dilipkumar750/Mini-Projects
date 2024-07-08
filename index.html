@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.jpeg" type="image/x-icon">
+    <title>HDFC Net Banking Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #495057;
+        }
+
+        .form-group input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        .forgot-link {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.875em;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 50%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .info-message {
+            padding: 20px;
+            border-radius: 4px;
+            margin-left: 40px;
+            margin-top: 1in; /* 1-inch gap */
+            /* background-color: #d0e8ff; */
+        }
+
+        .info-message p {
+            margin: 10px 0;
+        }
+
+        .first-time-user, .extra-features, .signup-prompt {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #000000;
+        }
+
+        .register-link, .extra-features-link, .signup-link {
+            display: block;
+            margin-top: 5px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .register-link:hover, .extra-features-link:hover, .signup-link:hover {
+            text-decoration: underline;
+        }
+
+        .signup-prompt-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .signup-prompt p, .signup-prompt a {
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login">
+            <h2>Login to Net Banking</h2>
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <label for="customerID">Customer ID / User ID:</label>
+                    <input style="width: 45%; float: inline-end; margin-top: -25px;" type="text" id="customerID" name="customerID" required><br>
+                    <a style=" float: inline-end; margin-top: 10px; margin-left: 100px;" href="/forgot-customer-id" class="forgot-link" >Forgot Customer ID?</a>
+                </div>
+                <button style="margin-left: 150px; float: right; margin-top: 20px;" type="submit">Continue</button>
+            </form>
+            <div class="info-message1" style="margin-top: 25%; background-color: rgb(197, 216, 210); padding: 5px; border-radius: 5px;">
+                <p>Dear Customer,</p>
+                <p>Welcome to the new login page of HDFC Bank NetBanking.<br> Its lighter look and feel is designed to give you the best possible<br> user experience. Please continue to login using your<br> customer ID and password.</p>
+            </div>
+            <div class="signup-prompt signup-prompt-grid">
+                <div>
+                    <p><b>Don't have an HDFC savings account?</b></p>
+                </div><br>
+                <div>
+                    <p><a href="/credit-card-login" class="signup-link">Credit Card only? Login here</a></p>
+                </div>
+                <div>
+                    <p><a href="/home-loans-login" class="signup-link"> Home Loans? Login here</a></p>
+                </div>
+                <div>
+                    <p><a href="/prepaid-card-login" class="signup-link">Prepaid Card only? Login here</a></p>
+                </div>
+                <div>
+                    <p><a href="/deposits-login" class="signup-link">HDFC Ltd. Deposits? Login here</a></p>
+                </div>
+                <div>
+                    <p><a href="/retail-loan-login" class="signup-link">Retail Loan only? Login here</a></p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="info-message" style="margin-left: 100px; justify-content: center;">
+                <img src="nortan .png" alt="nortan" style="padding: 100px; margin-top: -150px; margin-bottom: -100px;">
+                <p>Your security is of utmost importance. <a href="/security-tips"><br>Know More...</a></p>
+                <p style="margin-top: 30px;"><b style="font-size: larger;">First Time User? </b><a href="/register" class="register-link" >Register Now</a>for a host of convenient features</p>
+                <h3 style="font-size: larger; ">We have added a host of new features!</h3>
+                    <p> You can now do so much more:</p>
+                <ul>
+                    <li>Anywhere access through Desktop or mobile</li>
+                    <li>Enhanced security measures</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
